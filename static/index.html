@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MongoDB Charts Embedding Example (Node)</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script>
+        function renderSignedAuthChart(chartId, iframeId) {
+            const embedUrlRequest = new Request(`/api/embeddedchart/${chartId}`);
+            fetch(embedUrlRequest)
+                .then(response => response.text())
+                .then(url => {document.getElementById(iframeId).src = url});
+        }
+    </script>
+</head>
+<body>
+    <h1>MongoDB Charts Embedding Example (Node)</h1>
+    <iframe id="embeddedChart" width="800" height="600" frameborder="0"></iframe>
+
+
+    <script>
+        renderSignedAuthChart('f0568f57-295e-4bb7-aa88-ab581a68c8a7', 'embeddedChart'); // Replace first parameter with your Embedded Chart ID
+    </script>
+
+    <p id="errorCode">If you're getting an error code instead of a chart, <a href="https://docs.mongodb.com/charts/saas/embedding-charts/#embedded-charts-error-codes" target="_blank">click here</a>
+        to find out what the code means.</p>
+</body>
+</html>
