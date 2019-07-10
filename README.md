@@ -1,4 +1,4 @@
-![Alt text](static/images/mongo_charts_ex.png?raw=true "Best Red Wine Brands for Cheapos")
+![Alt text](static/images/mongo_charts_ex.gif?raw=true "Best Red Wine Brands for Cheapos")
 
 MongoDB Charts Embedding Example - Verified Signature Auth in Node
 ==================================================================
